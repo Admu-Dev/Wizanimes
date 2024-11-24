@@ -1,0 +1,1186 @@
+/*
+__________________________________________________________________________
+
+                    reset
+__________________________________________________________________________
+ */
+* {
+
+  font-family: Berkshire Swash, sans-serif;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: #171A1B;
+
+}
+
+.fond-ecran {
+  position: absolute;
+  position: fixed;
+}
+.fond-ecran.camera-img  {
+  top: 17%;
+  left: 10px;
+  width: 200px;
+  transform: rotate(-20deg);
+}
+
+.fond-ecran.stream-img {
+  top: 17%;
+  right: 5%;
+  width: 200px;
+  transform: rotate(10deg);
+}
+/*
+__________________________________________________________________________
+
+                    Header
+__________________________________________________________________________
+ */
+
+
+ header {
+  position: fixed;
+  width: 100%;
+  height: 8vh;
+  padding: 10px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 9999;
+  text-decoration: none;
+  background-color: rgba(182, 182, 182, 0.1);
+  position: top;
+  z-index: 9999999999;
+}
+
+header .menu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+header .menu ul {
+  display: flex;
+  justify-content: center;
+  list-style: none ;
+}
+
+header .menu ul li a{
+  color: white;
+  font-size: 17px;
+  margin: 0 10px;
+  border-bottom: 2px solid transparent;
+  transition: all 0.8s ease;
+  text-decoration: none;
+}
+
+header .menu .active {
+  border-bottom: 2px solid rgb(230, 0, 0);
+}
+
+
+header .menu ul li a i{
+  margin: 0 3px;
+}
+
+header .menu ul li:hover a{
+  border-bottom: 2px solid rgb(230, 0, 0);
+}
+
+header .menu img {
+  width: 70px;
+}
+
+header .menu .account-mobil {
+  display: none;
+  opacity: 0;
+}
+.fa-bars {
+  color: #fff;
+}
+
+.menu-icon {
+  display: none;
+}
+
+
+header .account {
+  display: flex;
+  position: right;
+}
+
+.btn {
+  display: inline-block;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #ffffff;
+  text-align: center;
+  text-decoration: none;
+  vertical-align: middle;
+  cursor: pointer;
+  background-color: transparent;
+  border: 1px solid transparent;
+    border-top-color: transparent;
+    border-right-color: transparent;
+    border-bottom-color: transparent;
+    border-left-color: transparent;
+  padding: .375rem .75rem;
+  font-size: 1rem;
+  border-radius: .25rem;
+  transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+
+  .btn:hover {
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+  }
+  .btn-outline-light {
+    border: #ecf0f1 1px solid;
+    margin-right: 0.5rem;
+    margin-left: 0.5rem;
+  }
+
+  .btn-outline-light:hover {
+    color: #000;
+    background-color: #f8f9fa;
+    border-color: #f8f9fa;
+  }
+
+  .btn-warning {
+    color: #000;
+    background-color: #ffca2c;
+    border-color: #ffc720;
+  }
+
+
+  .btn-warning-red {
+    margin-left: 0.5rem;
+    color: rgb(255, 255, 255);
+    background-color:brown;
+    border-color: brown;
+  }
+  /*
+__________________________________________________________________________
+
+                   Home
+__________________________________________________________________________
+ */
+
+
+  .home .box {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    background-position: center !important;
+    background-size: cover !important;
+    justify-content: flex-end;
+    padding: 2rem 9%;
+  }
+
+  .home .second {
+    justify-content: flex-start;
+  }
+
+  .home .center {
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+
+  .home .box .content {
+    width: 45rem ;
+  }
+
+  .home .box .content span{
+    font-size: 4rem;
+    color: rgb(255, 255, 255);
+  }
+
+  .home .box .content h3{
+    font-size: 5rem;
+    color: rgb(165, 42, 42);
+    padding-top: 0.5rem;
+    text-transform: uppercase;
+  }
+
+  .home .box .content p {
+    line-height: 2;
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 1.30rem;
+    padding: 1rem 0;
+  }
+
+  .home .box .content .btn-home {
+    margin-top: 1rem;
+    display: inline;
+    border: #222 2px solid;
+    color: rgb(0, 0, 0);
+    font-weight: 500;
+    cursor: pointer;
+    background: none;
+    font-size: 1.7rem;
+    padding: 1rem 3rem;
+    text-decoration: none;
+    box-shadow: rgba(0, 0, 0, 0.09) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+    border-radius: 20px;
+  }
+
+  .home .box .content .btn-home:hover {
+    background-color: rgb(32, 32, 32);
+    color: white;
+  }
+  
+  
+
+  /*
+__________________________________________________________________________
+
+                   Nos recommandations
+__________________________________________________________________________
+ */
+
+
+
+.Tendances {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 0 100px;
+  background: #171A1B;
+  overflow-x: hidden; 
+}
+
+.Tendances h2 {
+  color: #f5f5f5;
+  font-size: clamp(35px, 4.8vw, 60px);
+  margin: 100px 0;
+  position: relative;
+  cursor: default;
+}
+
+
+ /*
+__________________________________________________________________________
+
+                   Cards Anime
+__________________________________________________________________________
+ */
+
+.container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+.row {
+  overflow-x: scroll;
+  width: 90%;
+}
+.row-inner {
+  transition: 450ms transform;
+  font-size: 0;
+  margin: 70px 70px;
+  padding-bottom: 50px;
+  white-space: nowrap;
+
+}
+
+.card {
+  position: relative;
+  display: inline-block;
+  width: 180px;
+  height: 243px;
+  margin-right: 10px;
+  font-size: 20px;
+  cursor: pointer;
+  transition: 450ms all;
+  transform-origin: center left;
+}
+.card-img {
+  width: 180px;
+  height: 243px;
+}
+.card-details {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  top: 0;
+  font-size: 10px;
+  opacity: 0;
+  background: linear-gradient(to top, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0) 100%);
+  transition: 450ms opacity;
+}
+.card-details:after,
+.card-details:before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  display: #000;
+}
+
+.card-details:after {
+  margin-top: -25px;
+  margin-left: -25px;
+  width: 50px;
+  height: 50px;
+  border: 3px solid #ecf0f1;
+  line-height: 50px;
+  text-align: center;
+  border-radius: 100%;
+  background: rgba(0,0,0,0.5);
+  z-index: 1;
+}
+
+.card-details:before {
+  content: '▶';
+  left: 0;
+  width: 100%;
+  font-size: 30px;
+  margin-left: 7px;
+  margin-top: -18px;
+  text-align: center;
+  z-index: 2;
+}
+.card:hover .card-details {
+  opacity: 1;
+}
+
+.card-title {
+  position: absolute;
+  bottom: 0;
+  padding: 10px;
+  color: #000;
+  background-color: white;
+}
+
+.row-inner:hover .card {
+  opacity: 0.7;
+}
+.row-inner:hover {
+  transform: translate3d(50px, 0, 0);
+}
+.row-inner:hover .card:hover {
+  transform: scale(1.5);
+  opacity: 1;
+}
+.card:hover ~ .card {
+  transform: translate3d(125px, 0, 0);
+}
+
+.cards-a {
+  text-decoration: none;
+  color: #eee;
+}
+
+
+
+
+
+/*
+__________________________________________________________________________
+
+                    profil
+__________________________________________________________________________
+ */
+
+
+
+
+
+.profil {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 100vh;
+  position: relative;
+  padding: 0 200px;
+  background: #171A1B;
+}
+
+
+.profil .container {
+  width: 400px;
+  height: 500px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  background-color: #222;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px #000;
+  padding: 10px 40px;
+  overflow: hidden;
+}
+
+.profil .container .image img{
+  height: 150px;
+  width: 150px;
+  border-radius: 50%;
+  border: 5px solid #fff;
+  box-shadow: 0 0 5px #333;
+  position: relative;
+
+}
+
+.profil .container .content  .name{
+  padding-left: 10px;
+  margin-top: 20px;
+  font-size: 25px;
+  color: #f0f0f0;
+}
+
+.profil .container .content  .post{
+  font-size: 15px;
+  padding: 10px 0;
+  margin: 10px 5px;
+  border-radius: 50px;
+  background-color: #ccc;
+  color: #333;
+  text-align: center;
+}
+
+.profil .container .content .contact{
+  margin-top: 30px;
+}
+
+.profil .container .content .contact li{
+  list-style-type: none;
+  margin: 10px 0;
+  color: #ccc;
+  font-weight: 600;
+  letter-spacing: 2px;
+}
+
+.profil .container .content .contact li i{
+  height: 35px;
+  width: 35px;
+  line-height: 35px;
+  border-radius: 50%;
+  text-align: center;
+  background-color: #2c3e50;
+  margin-right: 5px;
+}
+
+.profil .container-like {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 900px;
+  height: auto;
+  background-color: #222;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px #000;
+  margin-top: 100px;
+  margin-bottom: 50px;
+  margin-left: 50px;
+}
+
+.profil .container-like h2{
+  color: #f5f5f5;
+  font-size: clamp(30px, 4.8vw, 45px);
+  margin: 50px 0;
+  position: relative;
+  cursor: default;
+}
+
+.profil .container-like h3{
+  color: #f5f5f5;
+  font-size: clamp(15px, 4.8vw, 30px);
+  margin: 200px 20px;
+  position: relative;
+  cursor: default;
+}
+
+
+/*
+__________________________________________________________________________
+
+                    series-violentes
+__________________________________________________________________________
+ */
+
+
+
+
+
+ .series-violentes {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 0 100px;
+  background: #171A1B;
+  overflow-x: hidden; 
+}
+
+.series-violentes h2 {
+  color: #f5f5f5;
+  font-size: clamp(35px, 4.8vw, 60px);
+  margin: 100px 0;
+  position: relative;
+  cursor: default;
+}
+
+
+
+/*
+__________________________________________________________________________
+
+                    action-aventure
+__________________________________________________________________________
+ */
+
+
+
+
+
+ .action-aventure {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 0 100px;
+  background: #171A1B;
+  overflow-x: hidden; 
+}
+
+.action-aventure h2 {
+  color: #f5f5f5;
+  font-size: clamp(35px, 4.8vw, 60px);
+  margin: 100px 0;
+  position: relative;
+  cursor: default;
+}
+
+/*
+__________________________________________________________________________
+
+                    Film
+__________________________________________________________________________
+ */
+
+
+
+ .Film {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 0 100px;
+  background: #171A1B;
+  overflow-x: hidden; 
+}
+
+.Film h2 {
+  color: #f5f5f5;
+  font-size: clamp(35px, 4.8vw, 60px);
+  margin: 100px 0;
+  position: relative;
+  cursor: default;
+}
+
+
+
+
+
+/*
+__________________________________________________________________________
+
+                    Animes-VO
+__________________________________________________________________________
+ */
+ .Animes-VO {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 0 100px;
+  background: #171A1B;
+  overflow-x: hidden; 
+}
+
+.Animes-VO h2 {
+  color: #f5f5f5;
+  font-size: clamp(35px, 4.8vw, 60px);
+  margin: 100px 0;
+  position: relative;
+  cursor: default;
+}
+
+
+
+/*
+__________________________________________________________________________
+
+                    Animes-VF 
+__________________________________________________________________________
+ */
+
+
+.Animes-VF {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 0 100px;
+  background: #171A1B;
+  overflow-x: hidden; 
+}
+
+.Animes-VF h2 {
+  color: #f5f5f5;
+  font-size: clamp(35px, 4.8vw, 60px);
+  margin: 100px 0;
+  position: relative;
+  cursor: default;
+}
+
+
+/*
+__________________________________________________________________________
+
+                    Ajouts recents
+__________________________________________________________________________
+ */
+
+
+ .Ajouts {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 0 100px;
+  background: #171A1B;
+  overflow-x: hidden; 
+}
+
+.Ajouts h2 {
+  color: #f5f5f5;
+  font-size: clamp(35px, 4.8vw, 60px);
+  margin: 100px 0;
+  position: relative;
+  cursor: default;
+}
+
+
+.Ajouts .no-anime {
+  color: #f5f5f5;
+  font-size: clamp(25px, 4.8vw, 45px);
+  margin: 100px 0;
+  position: relative;
+  cursor: default;
+}
+
+
+/*
+
+__________________________________________________________________________
+
+                    stream Video PLaylist
+__________________________________________________________________________
+ */
+
+ .stream {
+  min-height: 100vh;
+  background: #171A1B;
+  padding: 120px 50px 20px 200px;
+  z-index: -99999999999999;
+
+}
+
+.stream .container-video {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 15px;
+  align-items: flex-start;
+  padding: 5px 5%;
+}
+.stream .container-video .main-video {
+  background-color: #fff;
+  border-radius: 5px;
+  padding: 10px;
+}
+
+.stream .container-video .main-video video{
+  width: 100%;
+  height: auto;
+  max-height: 600px;
+  border-radius: 5px;
+}
+
+.stream .container-video .main-video .text {
+  display: flex;
+  justify-content: space-between;
+}
+.stream .container-video .main-video .title{
+  color: #333;
+  font-size: 23px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
+.stream .container-video .main-video .title span {
+  color: #ff2b2b;
+}
+
+.submit-list {
+  position: relative;
+  border: none;
+  outline: 0;
+  border-bottom: 2px solid transparent;
+  border-top: 2px solid transparent;
+  padding: 0.5em 1em;
+  display: inline-block;
+  border-radius: 2px;
+  font-size: 13px;
+  background-color: #4183c4;
+  color: #fff;
+  cursor: pointer;
+  margin-top: 15px;
+}
+
+.submit-list.sup {
+  background-color: #c44141;
+}
+
+
+
+.stream .container-video .video-list{
+  background-color: #fff;
+  border-radius: 5px;
+  height: 520px;
+  overflow-y: scroll;
+}
+
+.stream .container-video .main-video .vid video{
+  color: #333;
+  font-size: 23px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
+.stream .container-video .video-list::-webkit-scrollbar {
+  width: 7px;
+}
+
+.stream .container-video .video-list::-webkit-scrollbar-track {
+  background-color: #ccc;
+  border-radius: 5px;
+}
+
+.stream .container-video .video-list::-webkit-scrollbar-thumb {
+  background-color: #666;
+  border-radius: 50px;
+}
+
+.stream .container-video .video-list .vid video {
+  width: 100px;
+  border-radius: 5px;
+  height: auto;
+  max-height: 100px;
+}
+
+.stream .container-video .video-list .vid {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  background: #f7f7f7;
+  border-radius: 5px;
+  margin: 10px;
+  padding: 5px;
+  border: 1px solid rgba(0,0,0,0.1);
+  cursor: pointer;
+}
+
+.stream .container-video .video-list .vid .season {
+  background-color: #c44141;
+  color: #000;
+  margin-left: -5px;
+  margin-right: 0px;
+}
+.stream .container-video .video-list .vid .season:hover {
+  background-color: #c44141;
+  color: #000;
+}
+
+.stream .container-video .video-list .vid .season .title-season{
+  color: #000000;
+  font-size: clamp(17px, 3vw, 22px);
+  margin: 5px;
+  position: relative;
+}
+
+.stream .container-video .video-list .vid:hover {
+  background: #eee;
+}
+
+.stream .container-video .video-list .vid.active {
+  background: #2980b9;
+}
+
+.stream .container-video .video-list .vid.active .title{
+  color: #fff;
+}
+
+.stream .container-video .video-list .vid .title{
+  color: #333;
+  font-size: 18px;
+}
+
+.stream .container-video .video-list .vid .title span{
+  color: #ff2b2b;
+}
+
+
+@media (max-width: 1650px){
+  .stream {
+    padding: 120px 50px 20px 50px;
+  }
+}
+
+
+@media (max-width: 1080px){
+  .stream .container-video {
+    grid-template-columns: 1.5fr 1fr;
+    padding: 10px;
+  }
+}
+
+@media (max-width: 800px){
+  .stream .container-video {
+    grid-template-columns: 1fr;
+  }
+
+  .stream .container-video .main-video .text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+/*
+__________________________________________________________________________
+
+                    Footer
+__________________________________________________________________________
+ */
+
+
+
+footer {
+  height: 300px;
+  width: 100%;
+  position: end;
+  background: #000;
+  color: #f1f1f1;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+}
+
+.footer-haut {
+  width: 100%;
+  height: 80%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.info {
+  width: 200px;
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  margin: 10px;
+  
+}
+
+.info a div{
+  float: right;
+}
+
+.info h3 {
+  font-size: 25px;
+  font-family: Montserrat, Arial, Helvetica, sans-serif;
+  font-weight: 700;
+  margin-bottom: 15px;
+  color: #ff2020;
+  text-shadow: 0.5px 0.5px #ccc;
+}
+
+.info a {
+  display: block;
+  font-size: 16px;
+  color: hsl(0, 0%, 70%);
+  text-decoration: none;
+  padding: 5px 0;
+}
+
+.info a:hover {
+  transition: all 0.1s ease-in-out;
+  color: #f1f1f1;
+
+}
+
+.footer-bas {
+  width: 100%;
+  height: 20%;
+
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+
+  text-align: center;
+
+  border-top: 1px solid #f1f1f1;
+}
+
+.footer-bas p {
+  font-size: 20px;
+  font-family: Montserrat, Arial, Helvetica, sans-serif;
+  margin: 0 10px;
+}
+
+@media screen and (max-width: 660px) {
+  footer {
+      height: 80%;
+  }
+
+  .footer-bas p {
+      font-size: 20px;
+  }
+}
+
+@media screen and (max-width: 440px) {
+  footer {
+      height: 820px;
+  }
+  .footer-haut {
+      height: 80%;
+  }
+}
+
+
+
+/*
+__________________________________________________________________________
+
+                    RESPONSIVE
+__________________________________________________________________________
+ */
+
+
+ @media screen and (max-width: 1760px){
+
+  
+ .profil {
+  padding: 0 75px;
+ }
+
+}
+
+
+
+ @media screen and (max-width: 1200px) {
+
+  .fond-ecran.camera-img  {
+    top: 17%;
+    left: 10px;
+    width: 150px;
+    transform: rotate(-20deg);
+  }
+  
+  .fond-ecran.stream-img {
+    top: 17%;
+    right: 5%;
+    width: 150px;
+    transform: rotate(10deg);
+  }
+
+
+}
+
+
+
+
+@media screen and (max-width: 1080px) {
+      
+  header .menu ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    margin-top: 15px;
+    width: 100%;
+    height: 92vh;
+    position: absolute;
+    top: 48px;
+    left: -150%;
+    opacity: 1;
+    transition: all 0.5s ease;
+    background-color: #171A1B;
+  }
+
+  header .menu ul.active{
+    left: 0;
+    opacity: 1;
+    transition: all 0.5s ease;
+    z-index: 1;
+  }
+
+  header .account.active{
+    left: 0;
+    opacity: 1;
+    transition: all 0.5s ease;
+    z-index: 1;
+  }
+
+  header .menu ul li a{
+    text-align: center;
+    padding: 1.5rem;
+    width: 100%;
+    display: table;
+    margin: 0;
+  }
+
+  header .menu ul li a.active {
+    background-color: #b93a3a;
+    border-bottom: none;
+  }
+  
+  
+  header .menu ul li a i{
+    margin: 0 3px;
+  }
+  
+  header .menu ul li:hover a{
+    border-bottom: 2px solid rgb(230, 0, 0);
+  }
+
+  header .account{
+    display: none;
+  }
+
+  header .menu .account-mobil{
+    margin-top: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    
+    opacity: 1;
+  }
+  
+  .menu-icon {
+    display: block;
+    position: absolute;
+    top: -8px;
+    right: 0;
+    transform: translate(-100%, 60%);
+    font-size: 2rem;
+    cursor: pointer;
+  }
+
+
+
+/*
+__________________________________________________________________________
+ */
+
+
+ .profil {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  position: relative;
+  padding: 0 50px;
+  background: #171A1B;
+ }
+
+ 
+.profil .container {
+  margin-top: 100px;
+}
+
+.profil .container-like {
+  margin-left: 0px;
+  width: 100%;
+}
+
+}
+
+
+@media screen and (max-width: 834px){
+
+  .fond-ecran.camera-img  {
+    top: 17%;
+    left: 10px;
+    width: 15%;
+    transform: rotate(-20deg);
+  }
+  
+  .fond-ecran.stream-img {
+    top: 17%;
+    right: 5%;
+    width: 15%;
+    transform: rotate(10deg);
+  }
+
+}
+
+
+@media screen and (max-width: 650px){
+  .fond-ecran {
+    display: none;
+  }
+
+  .Tendances, .profil, .series-violentes, .action-aventure, .Film, .Animes-VF, .Animes-VO{
+    padding: 0 25px;
+  }
+
+  .stream {
+    padding: 100px 25px;
+  }
+
+
+}
+
+
+
+@media screen and (max-width: 450px) {
+
+/*
+__________________________________________________________________________
+ */
+
+
+.profil .container {
+  margin-top: 100px;
+  width: 100%;
+}
+
+
+
+}
