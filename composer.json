@@ -1,0 +1,16 @@
+{
+    "name": "votre-nom-utilisateur/nom-du-projet",
+    "description": "Projet de streaming PHP",
+    "type": "project",
+    "require": {
+        "php": ">=7.4"
+    },
+    "autoload": {
+        "psr-4": {
+            "App\\": "src/"
+        }
+    },
+    "scripts": {
+        "test": "echo 'Pas de tests définis'"
+    }
+}
