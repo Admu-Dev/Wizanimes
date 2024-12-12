@@ -2,6 +2,7 @@
     "name": "votre-nom-utilisateur/nom-du-projet",
     "description": "Projet de streaming PHP",
     "type": "project",
+    "license": "proprietary", 
     "require": {
         "php": ">=7.4"
     },
